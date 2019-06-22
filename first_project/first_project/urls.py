@@ -26,6 +26,7 @@ from django.conf.urls import include
 #using regular expressions
 
 urlpatterns = [
+    url(r'^$',views.index,name='index'),
     url(r'^home/',views.index,name='index'),#returns index from urls.py in directory
     url(r'^first_app/',include('first_app.urls')), #
     #url(r'^/',include('first_app.urls')), #
