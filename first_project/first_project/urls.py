@@ -33,6 +33,7 @@ urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url(r'^first_app/',include('first_app.urls')), #
     #url(r'^/',include('first_app.urls')), #
     #url(r'^help/',include('first_app.urls')),
+
     url('help/', views.help,name='help'),
     url('energycosts/', views.energycosts,name='help'),
     url('contactus/', views.contactus,name='contactus'),
@@ -40,7 +41,7 @@ urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url('images/', views.images,name='images'),
     url('articles/', views.articles,name='articles'),
     url('savetoday/', views.savetoday,name='savetoday'),
-    url('energyderegulation/', views.energyderegulation,name='energyderegulation'),
+    url(r'^energyderegulation/', views.energyderegulation,name='energyderegulation'),
     url('consulting/', views.consulting,name='consulting'),
     path('admin/', admin.site.urls),
 
