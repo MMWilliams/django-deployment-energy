@@ -1,36 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="first_app/css.css">
+<style type="text/css">
+/*--text over an image ---------------------------------------------------------*/
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* menu bar--------------------------------------------------------------------*/
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* Vertical line */
+.vl {
+  border-left: 6px solid black;
+  height: 500px;
+}
+</sty
+/* end of style section */
+</style>
+
+<meta charset="UTF-8">
+<title>Home</title>
 </head>
 <body style="font-family:verdana;">
-<h1 style="border:1px; border-style:solid; border-color:#FF0000; padding: .1em; text-align:center"><br /> United Services Energy<br /></h1>
 
 
+  <!--
+                                  Navigation Bar
+  -->
 
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/aboutus">About Us</a>
+    <a href="/contactus">Contact Us</a>
+    <a href="/savetoday">Save Today</a>
+    <div class="dropdown">
+      <button class="dropbtn">Articles
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/energyderegulation">Energy Deregulation</a>
+        <a href="/energycosts">Energy Costs</a>
+
+        <a href="/consulting">Consulting, Management and Auditing</a>
+      </div>
+    </div>
+  </div>
+
+<!--
+                                End of navigation menu code
+                                Beginning of scrollign banner
+-->
+
+<marquee behavior="alternate" bgcolor="#bb3434" direction="right" height:=""
+loop="100" scrollamount="1" scrolldelay="0" width="100%">
+<span style="font-size: 20px;color:#FFFFFF">
+Choose from the most affordable energy plans on the market</span></marquee>
+</div>
+
+<!--
+                                End or banner
+
+-->
+
+<!--<h1 style="border:5px; border-style:solid; border-color:#FF0000; padding: .1em; text-align:center">
+-->
+<h1 style=text-align:center>
+   United Services Energy
+  <img src="/static/images/logo.jpg" width="100" height="100"><br /></h1>
+
+<div class="Container">
 <div class="banner-wrap">
-
     <div class="w3-content">
  <img class="mySlides" src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
       style="width:100%">
 
+
+
+<h2 style="text-align:center">
+<div class="centered">
+  <font color=white>
+Choosing the right energy supplier can be difficult</br>
+We make it easy
+</font>
+ </div></h2>
+</div>
+<!--
  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+-->
+<div align="center">
 
-    <div align="center">
  <marquee behavior="alternate" bgcolor="#bb3434" direction="left" height:=""
  loop="20" scrollamount="1" scrolldelay="5" width="100%">
  <span style="font-size: 20px;color:#FFFFFF">
+
  Reduce your utility costs today! Home and Business!</span></marquee>
 </div>
-
-
-
-
-
-
 
 <table style="width:100%">
     <h2 style="text-align:center">Average KW Costs</h2>
@@ -39,20 +219,17 @@
     <th>Residential: KWH Price</th>
   </tr>
 
-
   <tr>
     <td>Philadelphia</td>
     <td>50</td>
       <td>50</td>
   </tr>
 
-
     <tr>
     <td>Pennsylvania</td>
     <td>50</td>
     <td>50</td>
     </tr>
-
 
     <tr>
     <td>United Stated</td>
@@ -74,35 +251,15 @@
 
 
     <tr>
-    <td>UAfrica</td>
+    <td>Africa</td>
     <td>50</td>
     <td>50</td>
     </tr>
 </table>
 
-
-
-
-
 <p style="text-align:center;"><img src = "https://media.giphy.com/media/cR9cLG8VNa3m0/giphy.gif" class="center"><br />
 
-
-
-
-
 <!--
-
-<div id="container">
-	<ul>
-      	<li><img src="https://images.pexels.com/photos/7000/fre-sonneveld-powerlines.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="400" height="200" /></li>
-            <li><img src="https://images.pexels.com/photos/421888/pexels-photo-421888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="604" height="453" /></li>
-            <li><img src="https://images.pexels.com/photos/207489/pexels-photo-207489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="604" height="453" /></li>
-            <li><img src="https://images.pexels.com/photos/87236/pexels-photo-87236.jpeg?cs=srgb&dl=architecture-clouds-drilling-rig-87236.jpg&fm=jpg" width="604" height="453" /></li>
-            <li><img src="https://media3.giphy.com/media/JFXRHt0q5J8be/giphy.gif?cid=790b76115ce4bbf94f49453063647dff&rid=giphy.gif" width="604" height="453" /></li>
-      </ul>
-      <span class="button prevButton"></span>
-      <span class="button nextButton"></span>
-</div>
 
 -->
 
@@ -118,22 +275,70 @@
 					<div class="container">
                         <div class="banner">
 				<div class="wsite-section-elements">
-					<h2 class="wsite-content-title"
-                        style="text-align:center; background-color:rgb(218, 239, 211);">
+					<h2 class="wsite-content-title"style="text-align:center;">
+            <font color="#24678d"
                         <font size="4">functioning at the intersection<br />
-                        of energy and innovation<br /><br /><br /><br />United Services energy is your<br />
+                        of energy and innovation<br /><br /><br /><br />United Services Energy is your<br />
                         &#8203;trusted partner in energy management and<br />&#8203;auditing</font></h2>
+<hr width="900" size="1"  noshade color="black">
 
+<!-- Insert icons here + image
+-->
 <h2 class="wsite-content-title" style="text-align:center;"><font size="4">
-
+<font color="#24678d">
         <br />Our data driven approach leverages market energy prices<br />
         <br />We've sorted through the details and our expert analysts have done the research:<br />
-        &#8203;leading to more desirable prices for your energy needs.</font><br />
+        &#8203;leading to more desirable prices for your energy needs.</font><br /><br />
     </h2>
+<hr width="900" size="1"  noshade color="black">
+
+<table style="width:100%">
+<tr>
+<td>
+<img src= "https://image.freepik.com/free-vector/illustration-social-media-concept_53876-17828.jpg" alt="no image found" style="width:auto;max-width:100%">
+</br><h4>
+</td>
+
+<td>
+  <img src= "https://image.freepik.com/free-vector/piggy-bank_53876-25494.jpg" alt="no image found" style="width:auto;max-width:100%">
+</br><h4>
+</td>
+
+<td>
+
+  <img src="https://image.freepik.com/free-vector/flat-marine-engineering-concept-background_52683-9231.jpg" alt="no image found" style="width:auto;max-width:100%">
+</br>
+<h4>
+</td>
+</tr>
+</table>
 
 
 
+<table style="width:100%">
+<tr>
+<td>
+  <h4><font color=black>Connect to an expansive </br>
+  market of energy suppliers</h4>
+</td>
 
+<td>
+  <h4><font color=black>Allow energy suppliers to compete </br>
+    for your business by reducing their prices</h4>
+</td>
+
+<td>
+  <h4><font color=black>Take control of your energy </br>consumption</h4>
+</td>
+
+
+</tr>
+</table>
+
+<!-- add icons and three columns
+
+<img src="/uploads/9/3/5/3/93533432/icons8-network-64_orig.png" alt="Picture" style="width:auto;max-width:100%">
+-->
 
 <h2 class="wsite-content-title" style="text-align:center; background-color:rgb(218, 239, 211);">
     <font size="4">
@@ -143,60 +348,80 @@
         &#8203;experts can connect you to the ideal </font><br />
     <font color="#c2a43b">electricity </font><font color="#24678d">and</font>
     <font color="#5fa233">natural gas</font> <font color="#24678d">supplier</font>
-    <font color="#5ca5e0">.</font></font></h2>
-
-<!-- this comment sout the below code block
-
-<form style="text-align:center;">
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname">
-</form>
--->
+    <font color="#5ca5e0">.</font></font></h2><br />
 
 
-<h4>CLAIM YOUR SAVINGS, AND DISCOVER<br />
-                    YOUR OPTIONS FOR MORE AFFORDABLE<br />
-                    ENERGY BY FILLING OUT THE FORM BELOW</h4>
+    <!-- Insert icons here + image
+    -->
+
+
+
+
+<table style="width:100%">
+  <font color=black>
+  <h2 style="text-align:center">United Services Energy connects you to the top energy suppliers</h2>
+
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+<hr width="900" size="1"  noshade color="black">
+  <tr>
+    <td>  <img src="/static/images/powerlines.jpg" width="300" height="300"></br>
+      <font color=black>Claim your savings and discover<br />
+      your options for more </br>affordable energy</br>
+
+    </td>
+<td>
+  <hr width="1" size="500"  noshade color="black">
+</td>
+
+    <td>  <img src="/static/images/money.jpeg" width="300" height="300"></br>
+      <font color=black>Energy Deregulation</br>
+    Has created opportunities</br>
+    For you to save $100's anually</td>
+
+    <td>
+      <hr width="1" size="500"  noshade color="black">
+    </td>
+
+    <td>  <img src="/static/images/company.jpeg" width="300" height="300"></br>
+      <font color=black>Options for residential </br>
+        as well as commercial:</br>
+        Businesses large and small</td>
+
+</font>
+  </tr>
+</table><br /><br />
+
+
+<!--
 <form>
   Name:<br>
   <input type="text" name="Name"><br>
   Email:<br>
   <input type="text" name="Email Address">
-
 </form>
-
-
-
-
-
-<h2 class="wsite-content-title" style="text-align:center; background-color:rgb(0, 0, 211);">
-    <font size="4">
-    <font color="#FFFFFF">GET IN TOUCH TODAY<br />
-
-
-<h2 class="wsite-content-title" style="text-align:CENTER; background-color:rgb(0, 0, 211);">
-    <font size="2">
-        <font color="#FFFFFF">Explore your options with the fasting growing energy broker <br /></font></font></h2>
-
-
-        <h2 class="wsite-content-title" style="text-align:CENTER; background-color:rgb(0, 0, 211);">
-    <font size="4">
-    <font color="#FFFFFF">EMAIL US AT: UNITEDSERVICESENERGY@USA.COM<br /></h2>
-
- <h2 class="wsite-content-title" style="text-align:CENTER; background-color:rgb(0, 0, 211);">
-    <font size="4">
-    <font color="#FFFFFF">A PHILADELPHIA BASED COMPANY <br />
-
-    </h2>
-
-    {{ insert_me }}
-
-
-
-
+-->
 
 </div>
+
+<h2 class="wsite-content-title" style="text-align:center; background-color:black;">
+    <font size="4">
+    <font color="#FFFFFF">GET IN TOUCH TODAY!</br></br>
+      Explore your options with the fasting growing energy </br>consultation and data analytics company</br></br>
+
+<table style="width:100%">
+  <tr>
+    <td>EMAIL US AT:     UnitedServicesEnergy@USA.com</td>
+    <td>ADDRESS:     A PHILADELPHIA BASED COMPANY</td>
+  </tr>
+</table>
+    </h2>
+
+<!--
+<img class="image" src="images/icons8-network-64_orig.jpg" alt="no image">
+-->
+
 </body>
 </html>
