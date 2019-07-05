@@ -26,18 +26,18 @@ from django.conf.urls import include
 #using regular expressions
 
 #for each URL, input corresponding object in views.py
-
 urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url(r'^$',views.index,name='index'),
     url(r'^/',views.index,name='index'),#returns index from urls.py in directory
-    url(r'^first_app/',include('first_app.urls')), #
+    url(r'^first_app/',include('first_app.urls')),
 
+    #
     #path('/energycosts',views.energycosts),
-
     #url(r'^energycosts/,views.index,name='energycosts'),#returns index from urls.py in directory
+    path('energycosts/', views.energycosts),
+
     url(r'^energycosts/',views.energycosts,name='energycosts'),#returns index from urls.py in directory
     path(r'^energycosts/',views.energycosts,name='energycosts'),#returns index from urls.py in directory
-
     url('contactus/', views.contactus,name='contactus'),
     url('aboutus/', views.aboutus,name='aboutus'),
     url('images/', views.images,name='images'),
