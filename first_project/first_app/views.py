@@ -19,7 +19,6 @@ def contactus(request):
     contactus_insert = {'contactus_insert': 'Hello I am from Statis/images.html'}
     return render(request, 'first_app/contactus.html',context=contactus_insert)
 
-
 def aboutus(request):
     aboutus_insert = {'aboutus_insert': 'Hello I am from Statis/aboutus.html'}
     return render(request, 'first_app/aboutus.html',context=aboutus_insert)
@@ -39,7 +38,6 @@ def energycosts(request):
 def energyderegulation(request):
     energyderegulation_insert = {'energyderegulation_insert': 'Hello I am from Statis/energyderegulation.html'}
     return render(request, 'first_app/energyderegulation.html',context=energyderegulation_insert)
-
 
 def savetoday(request):
     savetoday_insert = {'savetoday_insert': 'Hello I am from Statis/savetoday.html'}
