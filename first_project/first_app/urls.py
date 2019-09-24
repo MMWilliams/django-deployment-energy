@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'savetoday/', views.savetoday,name='savetoday'),
     url(r'energyderegulation/', views.energyderegulation),
     url(r'consulting/', views.consulting,name='consulting'),
-    url(r'energycosts/', views.energycosts,name='energycosts'),
+    url(r'energycosts/', views.energycosts,name='energycosts')
 
 
     #url(r'^first_app/',include('first_app.urls')),
