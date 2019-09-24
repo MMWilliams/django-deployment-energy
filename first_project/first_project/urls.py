@@ -32,11 +32,6 @@ urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url(r'^/',views.index,name='index'),#returns index from urls.py in directory
 
 
-
-    #path('/energycosts',views.energycosts),
-    #url(r'^energycosts/,views.index,name='energycosts'),#returns index from urls.py in directory
-    #path('energycosts/', views.energycosts),
-
     url('energycosts/', views.energycosts,name='energycosts'),
     url('contactus/', views.contactus,name='contactus'),
     url('aboutus/', views.aboutus,name='aboutus'),
