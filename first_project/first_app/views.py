@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 def index(request):
     return render(request, 'first_app/index.html')
-#settings nows about this directory because it was added to DIR []
+#settings knows about this directory because it was added to DIR []
 
 def help(request):
     return render(request, 'first_app/help.html')
@@ -14,7 +14,6 @@ def images(request):
 
 def contactus(request):
     return render(request, 'first_app/contactus.html')
-
 
 def aboutus(request):
     return render(request, 'first_app/aboutus.html')
@@ -29,7 +28,7 @@ def energycosts(request):
     return render(request, 'first_app/energycosts.html')
 
 def energyderegulation(request):
-    return render(request, 'first_app/energyderegulation.html')
+    return render(request, 'first_project/first_app/energyderegulation.html')
 
 def savetoday(request):
     return render(request, 'first_app/savetoday.html')

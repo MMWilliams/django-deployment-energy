@@ -5,14 +5,16 @@ from . import views
 
 
 urlpatterns = [
+
     url(r'^$',views.index,name='index'),
-    url('contactus/', views.contactus,name='contactus'),
-    url('aboutus/', views.aboutus,name='aboutus'),
-    url('images/', views.images,name='images'),
-    url('articles/', views.articles,name='articles'),
-    url('savetoday/', views.savetoday,name='savetoday'),
-    url('energyderegulation/', views.energyderegulation),
-    url('consulting/', views.consulting,name='consulting'),
+    url(r'contactus/', views.contactus,name='contactus'),
+    url(r'aboutus/', views.aboutus,name='aboutus'),
+    url(r'images/', views.images,name='images'),
+    url(r'articles/', views.articles,name='articles'),
+    url(r'savetoday/', views.savetoday,name='savetoday'),
+    url(r'energyderegulation/', views.energyderegulation),
+    url(r'consulting/', views.consulting,name='consulting'),
+
 
     #url(r'^first_app/',include('first_app.urls')),
     #this needs to be in the directory file

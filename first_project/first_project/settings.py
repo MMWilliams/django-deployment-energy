@@ -17,8 +17,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #print(__file__) #prints current files
 #print(os.path.abspath(__file__))
 print(BASE_DIR)
+
+
 TEMPLATES_DIR = os.path.join(BASE_DIR,"templates")
-#print(TEMPLATES_DIR)
+print("templates are stored here: " + TEMPLATES_DIR)
 STATIC_DIR = os.path.join(BASE_DIR,"static")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -29,7 +31,7 @@ SECRET_KEY = '8l&h&7mzx*64%7te7&)wyq2b&(e&!_*)kvzcnt&jcx3m_4^dso'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mwilliams.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['mwilliams.pythonanywhere.com','127.0.0.1','mwilliams.pythonanywhere.com/',]
 
 
 # Application definition. Connecting app file to settings.
