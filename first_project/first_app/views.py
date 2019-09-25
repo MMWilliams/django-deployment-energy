@@ -3,14 +3,14 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'first_app/index.html')
+    return render(request, 'first_project/first_app/index.html')
 #settings knows about this directory because it was added to DIR []
 
 def help(request):
     return render(request, 'first_project/first_app/help.html')
 
 def images(request):
-    return render(request, 'first_app/images.html')
+    return render(request, 'first_project/first_app/images.html')
 
 def contactus(request):
     return render(request, 'first_project/first_app/contactus.html')
@@ -26,6 +26,9 @@ def consulting(request):
 
 def energycosts(request):
     return render(request, 'first_project/first_app/energycosts.html')
+
+def energyderegulation(request):
+    return render(request, 'first_project/first_app/energyderegulation.html')
 
 def savetoday(request):
     return render(request, 'first_project/first_app/savetoday.html')
