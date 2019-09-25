@@ -7,31 +7,31 @@ def index(request):
 #settings knows about this directory because it was added to DIR []
 
 def help(request):
-    return render(request, 'first_project/first_app/help.html')
-
+    return render(request, 'help.html')
+#first_project/first_app/
 def images(request):
-    return render(request, 'first_project/first_app/images.html')
+    return render(request, 'images.html')
 
 def contactus(request):
-    return render(request, 'first_project/first_app/contactus.html')
+    return render(request, 'contactus.html')
 
 def aboutus(request):
-    return render(request, 'first_project/first_app/aboutus.html')
+    return render(request, 'aboutus.html')
 
 def articles(request):
-    return render(request, 'first_project/first_app/articles.html')
+    return render(request, 'articles.html')
 
 def consulting(request):
-    return render(request, 'first_project/first_app/consulting.html')
+    return render(request, 'consulting.html')
 
 def energycosts(request):
-    return render(request, 'first_project/first_app/energycosts.html')
+    return render(request, 'energycosts.html')
 
 def energyderegulation(request):
-    return render(request, 'first_project/first_app/energyderegulation.html')
+    return render(request, 'energyderegulation.html')
 
 def savetoday(request):
-    return render(request, 'first_project/first_app/savetoday.html')
+    return render(request, 'savetoday.html')
 
 def energyderegulation(request):
-    return render(request, 'first_project/first_app/energyderegulation.html')
+    return render(request, 'energyderegulation.html')
