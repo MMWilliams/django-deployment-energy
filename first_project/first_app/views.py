@@ -28,10 +28,7 @@ def energycosts(request):
     return render(request, 'first_project/first_app/energycosts.html')
 
 def energyderegulation(request):
-    return render(request, 'test/energyderegulation.html')
+    return render(request, 'energyderegulation.html')
 
 def savetoday(request):
     return render(request, 'first_project/first_app/savetoday.html')
-
-def energyderegulation(request):
-    return render(request, 'first_project/first_app/energyderegulation.html')
