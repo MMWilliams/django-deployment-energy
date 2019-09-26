@@ -3,9 +3,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return render(request, 'first_project/first_app/index.html')
+    return render(request, 'index.html')
 #settings knows about this directory because it was added to DIR []
-
+#first_project/first_project
 def help(request):
     return render(request, 'help.html')
 #first_project/first_app/
