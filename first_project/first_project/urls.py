@@ -29,7 +29,7 @@ from django.conf.urls import include
 #for each URL, input corresponding object in views.py
 urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url(r'^$',views.index,name='index'),
-    url(r'^/',views.index,name='index'),#returns index from urls.py in directory
+    #url(r'^/',views.index,name='index'),#returns index from urls.py in directory
 
 
 
@@ -37,15 +37,15 @@ urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     #url(r'^energycosts/,views.index,name='energycosts'),#returns index from urls.py in directory
     #path('energycosts/', views.energycosts),
 
-    url('energycosts/', views.energycosts,name='energycosts'),
-    url('contactus/', views.contactus,name='contactus'),
-    url('aboutus/', views.aboutus,name='aboutus'),
-    url('images/', views.images,name='images'),
-    url('articles/', views.articles,name='articles'),
-    url('savetoday/', views.savetoday,name='savetoday'),
-    url('energyderegulation/', views.energyderegulation,name='energyderegulation'),
-    url('consulting/', views.consulting,name='consulting'),
+    url(r'energycosts/', views.energycosts,name='energycosts'),
+    url(r'contactus/', views.contactus,name='contactus'),
+    url(r'aboutus/', views.aboutus,name='aboutus'),
+    url(r'images/', views.images,name='images'),
+    url(r'articles/', views.articles,name='articles'),
+    url(r'savetoday/', views.savetoday,name='savetoday'),
+    url(r'energyderegulation/', views.energyderegulation,name='energyderegulation'),
+    url(r'consulting/', views.consulting,name='consulting'),
     path('admin/', admin.site.urls),
-    url(r'first_app/',include('first_app.urls'))
+    #url(r'first_app/',include('first_app.urls'))
 
 ]
