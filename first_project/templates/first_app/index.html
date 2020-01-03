@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -290,18 +291,19 @@ Choose from the most affordable energy plans on the market</span></marquee>
 
 <!--
                                 Beginning of form
-
 -->
+<input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 <div class="form-style-5">
-<form>
+<form action="first_app/connect.php/" method="POST"> <!-- test change method back to Sub-->
+{% csrf_token %}
 <fieldset>
 <legend><span class="number">1</span> Request a Quote Today!</legend>
-<input type="text" name="field1" placeholder="Your Name *">
-<input type="email" name="field2" placeholder="Your Email *">
-<input type="number" name="field1" placeholder="Phone Number *">
-<textarea name="field3" placeholder="Business Name"></textarea>
+<input type="text" name="name" placeholder="Your Name *">
+<input type="email" name="email" placeholder="Your Email *">
+<input type="number" name="phone_number" placeholder="Phone Number *">
+<textarea name="business_name" placeholder="Business Name"></textarea>
 <label for="job">Interests:</label>
-<select id="job" name="field4">
+<select id="job" name="Interest">
 <optgroup label="Residential">
   <option value="Energy Audit">Energy Audit</option>
   <option value="Electricity Plans">Electricity Plans</option>
@@ -547,7 +549,7 @@ end of contct us section
     <td>  <img src="https://images.pexels.com/photos/164474/pexels-photo-164474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="no image" style="width:auto;max-width:100%"></br>
       <font color=black>Energy Deregulation</br>
     Has created opportunities</br>
-    For you to save $100's anually</td>
+    For you to save $1,000's anually</td>
 
     <td>
       <hr width="1" size="500"  noshade color="black">
@@ -556,7 +558,7 @@ end of contct us section
     <td>  <img src="https://images.pexels.com/photos/2096578/pexels-photo-2096578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="no image" style="width:auto;max-width:100%"></br>
       <font color=black>Options for residential </br>
         as well as commercial:</br>
-        Businesses large and small</td>
+        Serving businesses large and small</td>
 
 </font>
   </tr>
