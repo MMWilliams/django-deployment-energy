@@ -14,7 +14,7 @@ if (!empty($email) || (!empty($phone_number)) {
   if (mysqli_connect_error()){
   die('Connect Error ('. mysqli_connect_errno() .') '. mysqli_connect_error());
   }else{
-  $sql = "INSERT INTO account (phone_number)
+  $sql = "INSERT INTO account (email)
   values ('$email','$phone_number)";
   if ($conn->query($sql)){
   echo "New record is inserted sucessfully";
