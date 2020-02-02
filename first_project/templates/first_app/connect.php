@@ -6,7 +6,7 @@ $phone_number = $_POST['phone_number'];
 if (!empty($email) || (!empty($phone_number)) {
   $host = "MWILLIAMS.mysql.pythonanywhere-services.com";
   $dbusername = "MWILLIAMS";
-  $dbpassword = "Skateg215";
+  $dbpassword = "BQLPgb@EfS5jvTm";
   $dbname = "first_database";
   // Create connection
   $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);

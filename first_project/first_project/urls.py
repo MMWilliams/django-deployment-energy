@@ -45,7 +45,7 @@ urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY
     url(r'savetoday/', views.savetoday,name='savetoday'),
     url(r'energyderegulation/', views.energyderegulation,name='energyderegulation'),
     url(r'consulting/', views.consulting,name='consulting'),
-    url(r'connect.php/', views.index,name='index.html'),
+    url(r'connect2.php/', views.index,name='index.html'),
     path('admin/', admin.site.urls),
     #url(r'first_app/',include('first_app.urls'))
 
