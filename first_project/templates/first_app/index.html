@@ -10,7 +10,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="first_app/css.css">
 <style type="text/css">
+
+  /*SCroll/hover over image to reveal text */
+  .example {
+     cursor: pointer;
+     height: 70%;
+     position: relative;
+     overflow: hidden;
+     width: 50%; /* fix for mobile */
+     left: 60px;
+
+     }
+
+     .example .fadedbox {
+     background-color: #666666;
+     position: absolute;
+     top: 0;
+     left: 0;
+     color: #fff;
+     -webkit-transition: all 300ms ease-out;
+     -moz-transition: all 300ms ease-out;
+     -o-transition: all 300ms ease-out;
+     -ms-transition: all 300ms ease-out;
+     transition: all 300ms ease-out;
+     opacity: 0;
+     width: 100%; /* width of text*/
+     height: 70%;
+     padding: 130px 20px;
+     }
+     .example:hover .fadedbox { opacity: 0.8; }
+     .example .text {
+     -webkit-transition: all 300ms ease-out;
+     -moz-transition: all 300ms ease-out;
+     -o-transition: all 300ms ease-out;
+     -ms-transition: all 300ms ease-out;
+     transition: all 300ms ease-out;
+     transform: translateY(30px);
+     -webkit-transform: translateY(30px);
+     }
+     .example .title {
+     font-size: 2.5em;
+     text-transform: uppercase;
+     opacity: 0;
+     transition-delay: 0.2s;
+     transition-duration: 0.3s;
+     }
+     .example:hover .title,
+     .example:focus .title {
+     opacity: 1;
+     transform: translateY(0px);
+     -webkit-transform: translateY(0px);
+     }
 /*--text over an image ---------------------------------------------------------*/
+#demobox {
+  background-color: #cfc ;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -53,7 +108,59 @@
   transform: translate(-50%, -50%);
 }
 
+/*--Fonts---------------------------------------------------------*/
+p.optima {
+  font-family: Optima;
+  font-size: 40px;
+}
 
+p.optima_2 {
+  font-family: Optima;
+  font-size: 20px;
+}
+/*--text over an image ---------------------------------------------------------*/
+/* Container holding the image and the text */
+.container_2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 200px; /* The higher the number, the further from the position */
+  left: 400px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 200px;
+  right: 240px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 200px;
+  right: 200px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
 /* menu bar--------------------------------------------------------------------*/
 /* Navbar container */
 .navbar {
@@ -65,7 +172,7 @@
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -80,7 +187,7 @@
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   outline: none;
   color: white;
@@ -132,25 +239,30 @@
   border-left: 6px solid black;
   height: 500px;
 }
-/* css for contact form*/
+
+/* css for contact form ------------------------*/
 </style>
 <style type="text/css">
 .form-style-5{
-	max-width: 500px;
-	padding: 10px 20px;
+	/*max-width: 50%;  Changes for width */
+	padding: 20px 50px;
 	background: #f4f7f8;
 	margin: 10px auto;
-	padding: 20px;
+	padding: 30px;
 	background: #f4f7f8;
-	border-radius: 8px;
+	border-radius: 10px;
+  right: 60px;
 	font-family: Georgia, "Times New Roman", Times, serif;
+  float: right; clear: both; /* moves for to the right */
+
+
 }
 .form-style-5 fieldset{
 	border: none;
 }
 .form-style-5 legend {
 	font-size: 1.4em;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .form-style-5 label {
 	display: block;
@@ -173,7 +285,7 @@
 	font-size: 15px;
 	margin: 0;
 	outline: 0;
-	padding: 10px;
+	padding: 2%; /* space between each input field */
 	width: 100%;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -236,6 +348,14 @@
 {
 	background: #f77474;
 }
+
+/* Centering an image ------------------------------------*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
 <!--
                                 End of css contact form
@@ -253,6 +373,10 @@
   -->
 
   <div class="navbar">
+
+  <div class="container_2"> <!-- css container-->
+
+
     <a href="/">Home</a>
     <a href="/aboutus">About Us</a>
     <a href="/contactus">Contact Us</a>
@@ -268,8 +392,40 @@
         <a href="/consulting">Consulting, Management and Auditing</a>
       </div>
     </div>
+
+      <img src="https://i.ibb.co/Np93nY4/adler-bird-bird-of-prey-raptor-56865.jpg" alt="eagle soaring" style="width:100%"  height="800"> <!-- Eagle image -->
+      <!--
+      <div class="bottom-left">Bottom Left</div> <!-- Bottom Left -->
+
+      <div class="top-right">
+        <p class="optima">
+      We make energy simple,
+      </br>
+      make your choice today.
+
+      </p>
+      </div> <!-- Top Right -->
+
+
+      <!-- <div class="bottom-right">
+        <p class="optima_2">
+        Bottom Right
+        </p>
+      </div> <!-- Bottom Right-->
+
+
+      <div class="centered">
+        <p class="optima_2">
+        United Services Energy makes choosing clean energy easier than ever before.
+        </br>
+
+        </br>
+        Simply sign up and we take care of the rest.
+        </p>
+      </div> <!-- Centered -->
   </div>
 
+</div> <!-- end container -->
 <!--
                                 End of navigation menu code
                                 Beginning of scrollign banner
@@ -281,6 +437,7 @@ loop="100" scrollamount="1" scrolldelay="0" width="100%">
 Choose from the most affordable energy plans on the market</span></marquee>
 </div>
 
+
 <!--
                                 End or banner
 
@@ -288,13 +445,11 @@ Choose from the most affordable energy plans on the market</span></marquee>
 
 <!--<h1 style="border:5px; border-style:solid; border-color:#FF0000; padding: .1em; text-align:center">
 -->
-<h1 style=text-align:center>
-   United Services Energy
-  <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/p960x960/26240886_1883639385011367_1705304157619561668_o.jpg?_nc_cat=101&_nc_ohc=gTIYK59Y2WkAX_3Rv3I&_nc_ht=scontent-lga3-1.xx&_nc_tp=6&oh=d8849ded08161d1d01e9ebe69c8ea48a&oe=5EC98907" alt="" width="100" height="100"><br /></h1>
 
 <!--
                                 Beginning of form
 -->
+
 <input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 <div class="form-style-5">
 <form action="first_app/connect2.php/" method="POST"> <!-- test change method back to Sub-->
@@ -329,6 +484,46 @@ Choose from the most affordable energy plans on the market</span></marquee>
 </form>
 </div>
 
+
+
+<div class="example">
+<img src= "https://i.ibb.co/Y0NMnLc/Energy-companies.jpg" alt="Partners" style="width:100%" align="right">
+
+  <div class="fadedbox">
+    <div class="title text"> United Services Energy </br> is connected to the top energy suppliers </div>
+  </div>
+</div>
+
+
+<!--
+<img src= "https://i.ibb.co/CPFLbhH/13278995.jpg" alt="Partners" width="30%" height="50%">
+-->
+
+</br></br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br></br>
+</br></br></br></br></br>
+<img src="https://i.ibb.co/C5zPjkW/Logo.jpg" class="center" style="width:20%" > <!-- .center-->
+
+<h3 style=text-align:center>
+   Consistently Top Rated by our customers
+</h3>
+
+<!-- Start here -->
+
+<div class="center">
+<img src="https://i.ibb.co/SydJvbc/13439855.jpg" style="width:10%" >
+<img src="https://i.ibb.co/SydJvbc/13439855.jpg" style="width:20%" >
+<img src="https://i.ibb.co/SydJvbc/13439855.jpg" style="width:30%" >
+<img src="https://i.ibb.co/SydJvbc/13439855.jpg" style="width:20%" >
+<img src="https://i.ibb.co/SydJvbc/13439855.jpg" style="width:10%" >
+</div>
+
+
+</br>
+<h3 style=text-align:center>
+   Connected to Top Rated Suppliers
+</h3>
 <!--
 end of contct us section
 -->
@@ -354,8 +549,9 @@ end of contct us section
  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 -->
-<div align="center">
 
+
+<div align="center">
  <marquee behavior="alternate" bgcolor="#bb3434" direction="left" height:=""
  loop="20" scrollamount="1" scrolldelay="5" width="100%">
  <span style="font-size: 20px;color:#FFFFFF">
@@ -425,12 +621,17 @@ end of contct us section
 
 </table>
 <h4 style="text-align:center">U.S. Energy Information Administration (Data from forms EIA-861- schedules 4A-D, EIA-861S and EIA-861U) </h4>
-
-<p style="text-align:center;"><img src = "https://media.giphy.com/media/cR9cLG8VNa3m0/giphy.gif" class="center"><br />
+<br /><br />
+<p style="text-align:center;">
+<img src="https://media.giphy.com/media/cR9cLG8VNa3m0/giphy.gif" class="center"><br />
 
 <!--
 
 -->
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<div id="demobox">
 
 				<div class="wsite-elements wsite-not-footer wsite-header-elements">
 	<div class="wsite-section-wrap">
@@ -446,6 +647,7 @@ end of contct us section
 				<div class="wsite-section-elements">
 					<h2 class="wsite-content-title"style="text-align:center;">
             <font color="#24678d"
+
                         <font size="4">functioning at the intersection<br />
                         of energy and innovation<br /><br /><br /><br />United Services Energy is your<br />
                         &#8203;trusted partner in energy management and<br />&#8203;auditing</font></h2>
@@ -459,6 +661,11 @@ end of contct us section
         <br />Our data driven approach leverages market energy prices<br />
         <br />We've sorted through the details and our expert analysts have done the research:<br />
         &#8203;leading to more desirable prices for your energy needs.</font><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+</div>
+<!--End of demo box -->
     </h2>
 <hr align="center" width="200" size="1"  noshade color="black">
 
@@ -511,7 +718,7 @@ end of contct us section
 
 <img src="/uploads/9/3/5/3/93533432/icons8-network-64_orig.png" alt="Picture" style="width:auto;max-width:100%">
 -->
-
+<br /><br /><br /><br />
 <h2 class="wsite-content-title" style="text-align:center; background-color:rgb(218, 239, 211);">
     <font size="4">
     <font color="#24678d">Shopping for energy can be complicated;<br />
@@ -521,7 +728,7 @@ end of contct us section
     <font color="#c2a43b">electricity </font><font color="#24678d">and</font>
     <font color="#5fa233">natural gas</font> <font color="#24678d">supplier</font>
     <font color="#5ca5e0">.</font></font></h2><br />
-
+    <br /><br /><br /><br />
 
     <!-- Insert icons here + image
     -->
@@ -532,7 +739,7 @@ end of contct us section
 <table style="width:100%">
   <font color=black>
   <h2 style="text-align:center">United Services Energy connects you to the top energy suppliers</h2>
-
+  <br /><br />
   <tr>
     <th></th>
     <th></th>
@@ -541,6 +748,7 @@ end of contct us section
 
   <tr>
     <td>  <img src="https://images.pexels.com/photos/7000/fre-sonneveld-powerlines.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="no image" style="width:auto;max-width:100%"></br>
+      <br /><br />
       <font color=black>Claim your savings and discover<br />
       your options for more </br>affordable energy</br>
 
@@ -550,6 +758,7 @@ end of contct us section
 </td>
 
     <td>  <img src="https://images.pexels.com/photos/164474/pexels-photo-164474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="no image" style="width:auto;max-width:100%"></br>
+      <br /><br />
       <font color=black>Energy Deregulation</br>
     Has created opportunities</br>
     For you to save $1,000's anually</td>
@@ -559,6 +768,7 @@ end of contct us section
     </td>
 
     <td>  <img src="https://images.pexels.com/photos/2096578/pexels-photo-2096578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="no image" style="width:auto;max-width:100%"></br>
+      <br /><br />
       <font color=black>Options for residential </br>
         as well as commercial:</br>
         Serving businesses large and small</td>
@@ -578,7 +788,8 @@ end of contct us section
 -->
 
 </div>
-
+<br /><br /><br /><br />
+<br /><br /><br /><br />
 <!-- FOOTER FOR EACH PAGE -->
 <h2 class="wsite-content-title" style="text-align:center; background-color:black;">
     <font size="4">
@@ -607,8 +818,9 @@ end of contct us section
 </table>
     </h2>
 <!-- FOOTER FOR EACH PAGE -->
+{% block content %}
 
-
-
+  {% endblock %}
 </body>
+
 </html>
