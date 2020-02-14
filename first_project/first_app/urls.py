@@ -3,6 +3,7 @@ from first_app import views
 from django.conf.urls import include
 from . import views
 from django.urls import path
+from display_droplets.views import GetDroplets
 
 
 urlpatterns = [ #FOR EACH VIEW, INPUT CORRESPONDING VIEWS JOB IN VIEWS.PY

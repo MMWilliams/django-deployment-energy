@@ -2,6 +2,8 @@
 import os
 import sys
 
+
+
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'first_project.settings')
     try:
@@ -13,3 +15,7 @@ if __name__ == '__main__':
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+
+#Adding this in manage.py means that when you issue
+#commands to Django in development it will handle environment variables from your .env file.
