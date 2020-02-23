@@ -8,7 +8,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="first_app/css.css">
 <style type="text/css">
+  /* Email button - patch for form/database */
+.button {
+   border-radius: 2px;
+}
 
+.button a {
+   padding: 8px 12px;
+   border: 1px solid #ED2939;
+   border-radius: 2px;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   color: #ffffff;
+   text-decoration: none;
+   font-weight: bold;
+   display: inline-block;
+}
   /*SCroll/hover over image to reveal text */
   .example {
      cursor: pointer;
@@ -481,13 +496,17 @@ Choose from the most affordable energy plans on the market</span></marquee>
   <img src= "https://i.ibb.co/8xdVqxf/dollar.png" alt="Suppliers" style="width:3%" align="center">
   </center>
 
+<!-- Form needs to be connected to database. Until then, patch up with email button-->
+
 
 <div class="body_center">
 <input type="hidden" id="csrf_token" value='{"csrfmiddlewaretoken": "{{ csrf_token }}"}'>
 <div class="form-style-5">
-<form action="first_app/connect2.php/" method="POST"> <!-- test change method back to Sub-->
+<!--<form action="first_app/connect2.php/" method="POST">
 {% csrf_token %}
 <fieldset>
+-->
+<form action="mailto:unitedservicesenergy@usa.com?Subject=Energy%20Bill%20Review" method="post" enctype="text/plain">>
 <legend><span class="number">1</span> Request a Quote Today!</legend>
 <input type="text" name="name" placeholder="Your Name *">
 <input type="email" name="email" placeholder="Your Email *">
@@ -518,7 +537,11 @@ Choose from the most affordable energy plans on the market</span></marquee>
 </div>
 </div>
 
+<!-- Patch for form/database connection-->
 
+
+<!--<a href="mailto:unitedservicesenergy@usa.com?Subject=Energy%20Bill%20Review" target="_top"> </a>
+-->
 <!--
 <img src= "https://i.ibb.co/CPFLbhH/13278995.jpg" alt="Partners" width="30%" height="50%">
 -->
@@ -532,8 +555,12 @@ Youtube video
 </center>
 
 
-
-
+<!-- javascript call to an api
+<script>
+console.log("About to test this API");
+fetch("rainbow.jpg");
+</script>
+-->
 
 <center>
 <img src="https://i.ibb.co/C5zPjkW/Logo.jpg" class="center" style="width:30%" > <!-- .center-->
